@@ -73,8 +73,8 @@ class SearchPageState extends State<SearchPage> {
                         ),
                         child: DropdownButton(
                           items: const[
-                            DropdownMenuItem(value: "All documents", child: Text("All documents", style: TextStyle(color: Colors.black54))),
-                            DropdownMenuItem(value: "Document", child: Text("Document", style: TextStyle(color: Colors.black54))),
+                            DropdownMenuItem(value: "Article", child: Text("Article", style: TextStyle(color: Colors.black54))),
+                            DropdownMenuItem(value: "Review", child: Text("Review", style: TextStyle(color: Colors.black54))),
                           ], 
                           value: _selectedDropdownValue,
                           onChanged: onDropdownChanged,
