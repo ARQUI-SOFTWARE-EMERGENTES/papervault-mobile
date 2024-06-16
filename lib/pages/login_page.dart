@@ -1,10 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_app/common/routers.dart';
 import 'package:mobile_app/widgets/custom_cta_button.dart';
 import 'package:mobile_app/widgets/custom_text_form_field.dart';
-import 'package:mobile_app/pages/search_page.dart';
-import 'package:mobile_app/pages/sign_up.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -39,7 +38,7 @@ class LoginPageState extends State<LoginPage> {
               color: Colors.lightBlue.shade200,
               borderRadius: BorderRadius.circular(15)
             ),
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Form(         
               key: _formKey,
               child: Column(
@@ -85,7 +84,7 @@ class LoginPageState extends State<LoginPage> {
                           // Process the login if form inputs are valid
                           print("Username and Password validated!");
                         }
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage()));
+                        Navigator.pushNamed(context, ROUTE_SEARCH);
                       }
                     ),
                   ),
@@ -111,8 +110,7 @@ class LoginPageState extends State<LoginPage> {
                               decoration: TextDecoration.underline
                             ),
                             recognizer: TapGestureRecognizer()
-                              ..onTap = ()  => Navigator.push(
-                                context, MaterialPageRoute(builder: (context) => SignUpPage())),
+                              ..onTap = ()  => Navigator.pushNamed(context, ROUTE_SIGN_UP)
                           ),
                         ]
                       )

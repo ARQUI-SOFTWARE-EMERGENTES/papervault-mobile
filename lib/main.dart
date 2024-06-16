@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_app/common/routers.dart';
 import 'package:mobile_app/pages/login_page.dart';
-import 'pages/search_results.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: Routers.generateRoute,
+      initialRoute: ROUTE_LOGIN,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -34,7 +36,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      //home: LoginPage(),
       home: LoginPage()
     );
   }
