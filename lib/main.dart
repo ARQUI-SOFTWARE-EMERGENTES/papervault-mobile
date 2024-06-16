@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/search_page.dart';
+import 'package:mobile_app/pages/login_page.dart';
+import 'pages/search_results.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: LoginPage(),
-      home: SearchPage()
+      home: LoginPage()
     );
   }
 }
