@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_app/models/research.dart';
 import 'package:mobile_app/widgets/custom_search_result.dart';
+import 'package:mobile_app/widgets/custom_navigation_bar.dart';
 
 class SearchResultsPage extends StatefulWidget {
   @override
@@ -62,6 +63,7 @@ class SearchResultsState extends State<SearchResultsPage> {
           return CustomSearchResult(researchRecord: record); // Use the custom widget
         },
       ),
+      bottomNavigationBar: CustomNavigationBar() // Add the custom navigation bar
     );
   }
 }
