@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_app/common/routers.dart';
 import 'package:mobile_app/widgets/custom_cta_button.dart';
 import 'package:mobile_app/widgets/custom_navigation_bar.dart';
 import 'package:mobile_app/widgets/custom_text_form_field.dart';
@@ -100,12 +101,14 @@ class SearchPageState extends State<SearchPage> {
                       ),
                       const SizedBox(height: 20),
                       Center(                
-                        child: CustomCTAButton(text: "Search", onPressed: () {
+                        child: CustomCTAButton(
+                          text: "Search",
+                          onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              // Process the login if form inputs are valid
+                              
                               
                             }
-
+                            Navigator.pushNamed(context, ROUTE_SEARCH_RESULTS);
                           }
                         ),
                       )
