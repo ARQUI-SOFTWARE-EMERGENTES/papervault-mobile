@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/widgets/custom_cta_button.dart';
+import 'package:mobile_app/widgets/custom_navigation_bar.dart';
 import 'package:mobile_app/widgets/custom_text_form_field.dart';
 
 class SearchPage extends StatefulWidget {
@@ -116,6 +117,7 @@ class SearchPageState extends State<SearchPage> {
           ),
         ),
       ),
+      bottomNavigationBar: CustomNavigationBar(),
     );
   }
 }
