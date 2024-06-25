@@ -36,7 +36,7 @@ class CustomNavigationBar extends StatelessWidget {
             Navigator.pushNamed(context, ROUTE_SIGN_UP);
             break;
           case 2:
-            Navigator.pushNamed(context, ROUTE_LOGIN);
+            Navigator.pushNamed(context, ROUTE_UPLOAD);
             break;
         }
       },
