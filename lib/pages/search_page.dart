@@ -48,7 +48,7 @@ class SearchPageState extends State<SearchPage> {
             ),
             child: SingleChildScrollView(
               child: Padding(              
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Form(         
                   key: _formKey,
                   child: Column(
